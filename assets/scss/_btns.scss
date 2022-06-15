@@ -1,4 +1,9 @@
 .btn {
+    &_area {
+        &.ty_bot {
+            margin-top: 20px;
+        }
+    }
     &_ty1 {
         height: 50px;
         width: 100%;
@@ -8,7 +13,32 @@
         text-align: center;
         color: #fff;
         font-size: 16px;
-        font-weight: bold;
+        font-weight: 500;
         box-shadow: 0 4px 6px 0 rgba(98, 217, 116, 0.1);
+    }
+    &_ty2 {
+        height: 50px;
+        width: 100%;
+        border-radius: 25px;
+        line-height: 48px;
+        border: 1px solid #c8c8c8;
+        background-color: #fff;
+        color: map-get($colors, key);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &_ty_s1 {
+        display: inline-block;
+        vertical-align: top;
+        min-width: 106px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 5px;
+        background-color: map-get($colors, key);
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
     }
 }

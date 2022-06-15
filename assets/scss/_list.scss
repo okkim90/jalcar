@@ -1,0 +1,18 @@
+.list_info {
+    padding: 10px 0;
+    &_item {
+        display: flex;
+        padding: 10px 0;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    &_tit {
+        flex-shrink: 0;
+        width: 90px;
+        font-weight: normal;
+        color: rgba(151, 151, 151, 0.87);
+    }
+    &_cont {
+        flex: 1;
+    }
+}
