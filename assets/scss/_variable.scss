@@ -1,0 +1,95 @@
+/* 컬러 */
+$colors: (
+    key: #62d974,
+    blue: #1e90ff,
+    red: #f00,
+    lblue: #46b8ff,
+    orange: #ffa500,
+    yellow: #ff0
+);
+
+
+@each $key, $color in $colors {
+    .fc_#{$key} {
+        color: $color;
+    }
+}
+
+
+.blind {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px; height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+}
+
+
+.td_u {
+    text-decoration: underline;
+}
+
+.cursor {
+    &_default {
+        cursor: default;
+    }
+    &_pointer {
+        cursor: pointer;
+    }
+}
+
+.ta {
+    &C {
+        text-align: center;
+    }
+    &R {
+        text-align: right;
+    }
+    &L {
+        text-align: left;
+    }
+}
+
+.fwB {
+	font-weight: bold;
+}
+
+.mt0 {
+	margin-top: 0;
+}
+.mb0 {
+	margin-bottom: 0;
+}
+.mr0 {
+    margin-right: 0;
+}
+.ml0 {
+    margin-left: 0;
+}
+
+.pt0 {
+	padding-top: 0 !important;
+}
+.pb0 {
+	padding-bottom: 0 !important;
+}
+.pl0 {
+	padding-left: 0 !important;
+}
+.pr0 {
+	padding-right: 0 !important;
+}
+
+
+.no_drag {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

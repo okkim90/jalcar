@@ -1,0 +1,163 @@
+.lnb {
+    &_dim {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0,0,0,.4);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 999;
+        transition: all .4s ease-in-out;
+    }
+    &_cont {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        padding: 60px 20px 10px;
+        box-sizing: border-box;
+        position: fixed;
+        width: 80%;
+        height: 100%;
+        left: -80%;
+        top: 0;
+        background-color: #fff;
+        z-index: 1000;
+        transition: left .4s ease-in-out;
+    }
+    .close_lnb {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-image: url(../images/close_pop.svg);
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &.on {
+        .lnb_dim {
+            opacity: 1;
+            z-index: 999;
+            visibility: visible;
+            transition: all .4s ease-in-out;
+        }
+        .lnb_cont {
+            left: 0;
+        }
+    }
+
+    .my_car {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        min-height: 0;
+        padding-bottom: 20px;
+        &_tit {
+            display: block;
+            font-size: 18px;
+            line-height: 25px;
+            flex-shrink: 0;
+            margin-bottom: 10px;
+        }
+        &_list {
+            flex: 1;
+            overflow-y: auto;
+            min-height: 0;
+            margin: 0 -20px;
+            padding: 0 20px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+
+        }
+        &_item {
+            & + .my_car_item {
+                margin-top: 20px;
+            }
+        }
+        &_box {
+            position: relative;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            padding: 6px;
+            .btn_del {
+                position: absolute;
+                width: 28px;
+                height: 28px;
+                background-image: url(../images/del.svg);
+                background-repeat: no-repeat;
+
+                background-color: #fff;
+                background-position: center center;
+                border-radius: 50%;
+                right: -8px;
+                top: -8px;
+                z-index: 10;
+            }
+            &_inner {
+                border-radius: 10px;
+                border: 3px solid #000;
+                position: relative;
+                padding: 18px;
+                .dot {
+                    position: absolute;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+                    &.top_left {
+                        left: 8px;
+                        top: 8px;
+                    }
+                    &.top_right {
+                        right: 8px;
+                        top: 8px;
+                    }
+                    &.bot_left {
+                        left: 8px;
+                        bottom: 8px;
+                    }
+                    &.bot_right {
+                        right: 8px;
+                        bottom: 8px;
+                    }
+                }
+                .car_name {
+                    font-size: 16px;
+                    line-height: 1.4;
+                    letter-spacing: -.4px;
+                }
+                .car_num {
+                    display: block;
+                    margin-top: 5px;
+                    font-size: 32px;
+                    line-height: 1.2;
+                    letter-spacing: -.5px;
+                }
+
+            }
+        }
+    }
+    &_menu {
+        flex-shrink: 0;
+        &_item {
+            border-top: 1px solid #c9cac9;
+        }
+        &_link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            height: 59px;
+            font-size: 16px;
+            background: url(../images/arrow_right.svg) no-repeat right center;
+
+        }
+    }
+}

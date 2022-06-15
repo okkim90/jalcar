@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>잘카</title>
+    <script src="../assets/js/common.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <div id="container" class="container">
+            <div class="intro_cont inner">
+                <div class="intro_cont_img">
+                    <img src="../assets/images/main_car.png" alt="" class="img_car">
+                    <img src="../assets/images/main_bg.png" alt="" class="img_bg">
+                </div>
+                <h1 class="tit_box taC">
+                    <span class="tit_e">Good bye my car</span>
+                    <strong class="tit_k fc_key">잘카</strong>
+                </h1>
+                <div class="input_wrap">
+                    <div class="input_set">
+                        <label for="" class="input_tit">차량번호</label>
+                        <input type="text" class="input_txt" placeholder="차량번호 입력">
+                    </div>
+                    <div class="input_set">
+                        <label for="" class="input_tit">차주명</label>
+                        <input type="text" class="input_txt" placeholder="차주명 입력">
+                    </div>
+                </div>
+            </div>
+            <!-- 하단 레이어팝업 -->
+            <!-- [DEV] on class 토글 -->
+            <div class="layer_pop on ty_bottom">
+                <div class="layer_pop_inner">
+                    <div class="layer_pop_top">
+                        <h2 class="layer_pop_tit">패차신청</h2>
+                        <button type="button" onclick="close_pop(this)" class="close_popup"><span class="blind">팝업닫기</span></button>
+                    </div>
+                    <ul class="input_list">
+                        <li class="input_list_item">
+                            <label for="" class="input_list_tit">차량번호</label>
+                            <div class="input_list_cont">
+                                <input type="text" class="input_txt" value="111 너 1234" readonly>
+                            </div>
+                        </li>
+                        <li class="input_list_item">
+                            <label for="" class="input_list_tit">차주 이름</label>
+                            <div class="input_list_cont">
+                                <input type="text" class="input_txt" value="홍길동" readonly>
+                            </div>
+                        </li>
+                        <li class="input_list_item">
+                            <label for="" class="input_list_tit">차량번호</label>
+                            <div class="input_list_cont">
+                                <div class="check_list">
+                                    <label class="check_list_item cursor_pointer no_drag">
+                                        <input type="radio" name="num" class="input_hidden">
+                                        <span class="input_custom ty_radio"></span>
+                                        <strong class="check_tit">일반</strong>
+                                    </label>
+                                    <label class="check_list_item cursor_pointer no_drag">
+                                        <input type="radio" name="num" class="input_hidden">
+                                        <span class="input_custom ty_radio"></span>
+                                        <strong class="check_tit">압류</strong>
+                                    </label>
+                                    <!-- [DEV] 선택불가 일 경우 -->
+                                    <label class="check_list_item">
+                                        <input type="radio" name="num" class="input_hidden" disabled>
+                                        <span class="input_custom ty_radio"></span>
+                                        <strong class="check_tit">선택불가</strong>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="input_list_item">
+                            <label for="" class="input_list_tit">연락처</label>
+                            <div class="input_list_cont">
+                                <input type="tel" class="input_txt" placeholder="휴대전화 번호 입력">
+                            </div>
+                        </li>
+                        <li class="input_list_item">
+                            <label for="" class="input_list_tit">이메일</label>
+                            <div class="input_list_cont">
+                                <input type="email" class="input_txt" placeholder="이메일 입력">
+                            </div>
+                        </li>
+                        <li class="input_list_item">
+                            <label for="" class="input_list_tit">종료일</label>
+                            <div class="input_list_cont">
+                                <input type="text" class="input_txt" placeholder="종료일 입력  ex) 2022-05-30">
+                            </div>
+                        </li>
+                        <li class="input_list_item">
+                            <label for="" class="input_list_tit">계좌번호 </label>
+                            <div class="input_list_cont">
+                                <input type="text" class="input_txt" placeholder="계좌번호 입력">
+                            </div>
+                        </li>
+                        <li class="input_list_item">
+                            <label for="" class="input_list_tit">비밀번호</label>
+                            <div class="input_list_cont">
+                                <input type="password" class="input_txt" placeholder="비밀번호 6자리 입력">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="layer_pop_btns">
+                        <button type="button" class="btn_ty1">신청</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 하단 레이어팝업 -->
+        </div>
+    </div>
+</body>
+</html>

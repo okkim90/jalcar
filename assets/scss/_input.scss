@@ -1,0 +1,138 @@
+.input {
+    $input : &;
+    &_set {
+        & + & {
+            margin-top: 15px;
+        }
+
+        #{$input}_tit {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        #{$input}_txt {
+            width: 100%;
+            height: 46px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+            padding: 0 10px;
+            outline: #f00 1px;
+            transition: border-color .1s ease-in-out;
+
+            &:focus {
+                outline: none;
+                border-color: map-get($colors, key);
+            }
+
+        }
+    }
+    &_list {
+        &_item {
+            display: flex;
+
+
+            box-sizing: content-box;
+            border-bottom: 1px solid #c9cac9;
+            padding: 10px 0;
+            font-size: 16px;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        &_tit {
+            font-size: 16px;
+            line-height: 40px;
+            flex-shrink: 0;
+            width: 90px;
+            color: rgba(151, 151, 151, 0.87);
+            height: 40px;
+        }
+        &_cont {
+            flex: 1;
+            line-height: 40px;
+        }
+        .input_txt {
+            display: block;
+            height: 40px;
+            border: none;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            &:read-only {
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.check_list {
+    display: flex;
+    flex-wrap: wrap;
+    .check_list_item {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        line-height: 40px;
+        font-size: 15px;
+        margin-right: 15px;
+        .check_tit {
+            font-weight: normal;
+        }
+        .input_hidden {
+            position: absolute;
+            z-index: -999;
+            opacity: 0;
+            visibility: hidden;
+            &:checked ~ .input_custom {
+                &.ty_radio {
+                    background-color: map-get($colors, key);
+                    border-color: map-get($colors, key);
+                    &::after {
+                        border-color: map-get($colors, key);
+                    }
+                }
+            }
+            &:disabled ~ .check_tit {
+                opacity: 0.5;
+            }
+            &:disabled ~ .input_custom {
+                &.ty_radio {
+                    background-color: #ddd;
+                    &::after {
+                        background-color: #aaa;
+                    }
+                }
+            }
+        }
+        .input_custom {
+            margin-right: 5px;
+            &.ty_radio {
+                position: relative;
+                width: 16px;
+                height: 16px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 50%;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    border: 1px solid #ccc;
+                    box-sizing: border-box;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

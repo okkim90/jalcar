@@ -1,0 +1,38 @@
+.intro_cont {
+    padding-top: 76%;
+    &_img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        img {
+            width: 100%;
+            &.img_car {
+                z-index: 10;
+                left: 0;
+                top: 0;
+                position: absolute;
+            }
+        }
+    }
+    .tit_box {
+        font-weight: normal;
+        margin-bottom: 30px;
+        .tit_e {
+            display: block;
+            font-size: 32px;
+            line-height: 1;
+            letter-spacing: 0.25px;
+            color: #666;
+            font-family: 'Calibri';
+        }
+        .tit_k {
+            display: block;
+            font-size: 24px;
+            line-height: 1.25;
+            letter-spacing: 1.25px;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+    }
+}
