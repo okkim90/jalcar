@@ -67,7 +67,8 @@
         }
         .layer_pop_slider {
             width: 100%;
-
+            max-width: 700px;
+            overflow: hidden;
             background-color: #fff;
             position: relative;
             .img_box {
