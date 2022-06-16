@@ -32,6 +32,8 @@
         display: inline-block;
         vertical-align: top;
         min-width: 106px;
+        padding: 0 15px;
+        box-sizing: border-box;
         height: 32px;
         line-height: 32px;
         border-radius: 5px;
@@ -40,5 +42,45 @@
         color: #fff;
         font-size: 14px;
         font-weight: 500;
+    }
+    &_ty_s2 {
+        display: inline-block;
+        vertical-align: top;
+        min-width: 106px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        height: 32px;
+        line-height: 30px;
+        border: 1px solid map-get($colors, key);
+        border-radius: 16px;
+        background-color: #fff;
+        text-align: center;
+        color: map-get($colors, key);
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &_ty_s3 {
+        display: inline-block;
+        vertical-align: top;
+        min-width: 60px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 5px;
+        background-color: map-get($colors, key);
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &_ty_s4 {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 32px;
+        height: 32px;
+        padding: 0 15px;
+        border: none;
+        background-color: #fff;
     }
 }

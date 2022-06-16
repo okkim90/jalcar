@@ -1,0 +1,73 @@
+.status_top {
+    padding: 10px 0 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    .car_num {
+        display: block;
+        font-size: 32px;
+        line-height: 1.4;
+        letter-spacing: -.5px;
+    }
+    .btn_ty_s1 {
+        margin-top: 10px;
+    }
+}
+
+.list_status {
+    padding: 10px;
+    &_item + &_item {
+        margin-top: 10px;
+    }
+    .status_info {
+        padding: 20px 15px;
+        background-color: #fff;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        &_top {
+            display: flex;
+            align-items: flex-start;
+            .img_box {
+                width: 106px;
+                height: 106px;
+                flex-shrink: 0;
+                border: 1px solid #c8c8c8;
+                border-radius: 12px;
+                overflow: hidden;
+                box-sizing: border-box;
+                margin-right: 20px;
+                &_inner {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .txt_box {
+                flex: 1;
+
+            }
+        }
+        .status_info_btns {
+            margin-top: 24px;
+            display: flex;
+            justify-content: flex-end;
+            .btn_item {
+                margin-left: 10px;
+            }
+        }
+
+        .list_info {
+            padding: 0;
+            &_item {
+                padding: 0;
+                & + .list_info_item {
+                    margin-top: 19px;
+                }
+            }
+        }
+    }
+}

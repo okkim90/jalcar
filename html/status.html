@@ -8,44 +8,209 @@
     <script src="../assets/js/common.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
 </head>
 <body>
     <div id="wrap" class="wrap">
-        <div id="container" class="container sub">
+        <div id="container" class="container sub bg_grey">
             <header class="header ty_sub">
                 <button class="btn_back"><span class="blind">뒤로가기</span></button>
                 <h1 class="title">진행현황</h1>
                 <button class="btn_nav"><span class="blind">메뉴</span></button>
             </header>
             <div class="tab_area">
-                <ul class="list_tab">
-                    <li><a href="">회원정보</a></li>
-                    <li><a href="">폐차신청</a></li>
-                    <li><a href="">거래조회</a></li>
-                    <li><a href="">고객센터</a></li>
+                <ul class="tab_list">
+                    <li class="tab_list_item"><a href="" class="tab_list_link">회원정보</a></li>
+                    <li class="tab_list_item"><a href="" class="tab_list_link">폐차신청</a></li>
+                    <li class="tab_list_item"><a href="" class="tab_list_link">거래조회</a></li>
+                    <li class="tab_list_item"><a href="" class="tab_list_link">고객센터</a></li>
                 </ul>
             </div>
-            <div class="status_top">
 
+            <div class="status_top taC">
+                <strong class="car_num">111 너 1234</strong>
+                <button class="btn_ty_s1">종료</button>
             </div>
             <ul class="list_status">
-                <li>
+                <li class="list_status_item">
                     <div class="status_info">
                         <div class="status_info_top">
-                            <div class="img_box">
-
+                            <div class="img_box" onclick="open_slider()">
+                                <img src="https://picsum.photos/1000/1000" alt="">
                             </div>
                             <div class="txt_box">
-    
+                                <ul class="list_info">
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰자</strong>
+                                        <div class="list_info_cont">홍길동</div>
+                                    </li>
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰일</strong>
+                                        <div class="list_info_cont">2022-05-12</div>
+                                    </li>
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰금액</strong>
+                                        <div class="list_info_cont">2000 만원</div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="status_info_btns">
-                            <button class="btn"></button>
+                            <button class="btn_item btn_ty_s2">다른 버튼</button>
+                            <button class="btn_item btn_ty_s2">낙찰</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list_status_item">
+                    <div class="status_info">
+                        <div class="status_info_top">
+                            <div class="txt_box">
+                                <ul class="list_info">
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰자</strong>
+                                        <div class="list_info_cont">홍길동</div>
+                                    </li>
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰일</strong>
+                                        <div class="list_info_cont">2022-05-12</div>
+                                    </li>
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰금액</strong>
+                                        <div class="list_info_cont">2000 만원</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="status_info_btns">
+                            <button class="btn_item btn_ty_s2">다른 버튼</button>
+                            <button class="btn_item btn_ty_s2">낙찰</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list_status_item">
+                    <div class="status_info">
+                        <div class="status_info_top">
+                            <div class="txt_box">
+                                <ul class="list_info">
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰자</strong>
+                                        <div class="list_info_cont">홍길동</div>
+                                    </li>
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰일</strong>
+                                        <div class="list_info_cont">2022-05-12</div>
+                                    </li>
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰금액</strong>
+                                        <div class="list_info_cont">2000 만원</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="status_info_btns">
+                            <button class="btn_item btn_ty_s2">다른 버튼</button>
+                            <button class="btn_item btn_ty_s2">낙찰</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list_status_item">
+                    <div class="status_info">
+                        <div class="status_info_top">
+                            <div class="img_box" onclick="open_slider()">
+                                <img src="https://picsum.photos/1000/500" alt="">
+                            </div>
+                            <div class="txt_box">
+                                <ul class="list_info">
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰자</strong>
+                                        <div class="list_info_cont">홍길동</div>
+                                    </li>
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰일</strong>
+                                        <div class="list_info_cont">2022-05-12</div>
+                                    </li>
+                                    <li class="list_info_item">
+                                        <strong class="list_info_tit">입찰금액</strong>
+                                        <div class="list_info_cont">2000 만원</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="status_info_btns">
+                            <button class="btn_item btn_ty_s2">다른 버튼</button>
+                            <button class="btn_item btn_ty_s2">낙찰</button>
                         </div>
                     </div>
                 </li>
             </ul>
+
         </div>
     </div>
+
+
+    <div class="layer_pop popup_slider">
+        <div class="layer_pop_inner">
+
+            <div class="layer_pop_slider">
+                <button class="close_popup" onclick="close_pop(this); slider_destroy();"><span class="blind">팝업닫기</span></button>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <div class="img_box_inner">
+                                <img src="https://picsum.photos/1000/800" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <div class="img_box_inner">
+                                <img src="https://picsum.photos/1000/700" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <div class="img_box_inner">
+                                <img src="https://picsum.photos/1000/600" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <div class="img_box_inner">
+                                <img src="https://picsum.photos/1000/1000" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer_pop_slider_nav"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script>
+
+        function open_slider(){
+            $('.popup_slider').addClass('on');
+            slider('.layer_pop_slider');
+        }
+        var swiper = undefined;
+        function slider(target) {
+            swiper = new Swiper(target, {
+                loop: true,
+                pagination: {
+                    el: ".layer_pop_slider_nav",
+                },
+            });
+        }
+        function slider_destroy(){
+            swiper.destroy();
+            swiper = undefined;
+            $('.layer_pop_slider').find('.swiper-wrapper').removeAttr('style');
+            $('.layer_pop_slider').find('.swiper-slide').removeAttr('style');
+        }
+
+    </script>
 </body>
 </html>
